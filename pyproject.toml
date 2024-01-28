@@ -9,6 +9,7 @@ readme = "README.md"
 python = "^3.11"
 bom-pipeline = {git = "https://github.com/UCSD-E4E/bom-pipeline", rev = "main"}
 tqdm = "^4.66.1"
+pyyaml = "^6.0.1"
 
 
 [build-system]

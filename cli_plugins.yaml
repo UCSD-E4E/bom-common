@@ -1,0 +1,7 @@
+test_plugin:
+  module: test_plugin
+  class: TestPlugin
+  package: tests.integration
+  subcommands:
+    - test
+  description: "Test Plugin Command"
