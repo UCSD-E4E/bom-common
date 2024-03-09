@@ -35,7 +35,7 @@ class Cli:
                 class_type = getattr(module, plugin["class"])
 
                 cli_plugin: Plugin = class_type(subparser)
-                subparser.set_defaults(run_plugin=cli_plugin.execute)
+                subparser.set_defaults(run_plugin=cli_plugin)
 
     def __call__(self):
         args = self.parser.parse_args()
