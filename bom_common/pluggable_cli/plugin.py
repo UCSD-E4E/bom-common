@@ -1,6 +1,7 @@
 """
 Base class for cli plugins which allows for adding additional arguments to the cli.
 """
+
 from abc import abstractmethod
 from argparse import ArgumentParser, Namespace
 
@@ -14,7 +15,7 @@ class Plugin:
         pass
 
     @abstractmethod
-    def execute(self, args: Namespace):
+    def __call__(self, args: Namespace):
         """
         In a child class, this method is executed by a CLI plugin.
         """

@@ -9,9 +9,11 @@ from bom_common.pluggable_cli.plugin import Plugin
 
 
 class Cli:
-    def __init__(self, plugins_yaml_path: str or Path, description: str = None):
+    def __init__(
+        self, plugins_yaml_path: str | Path, prog: str = None, description: str = None
+    ):
         plugins_yaml_path = Path(plugins_yaml_path)
-        self.parser = ArgumentParser(description=description)
+        self.parser = ArgumentParser(prog=prog, description=description)
 
         subparsers = self.parser.add_subparsers(dest="command")
         subparsers.required = True
